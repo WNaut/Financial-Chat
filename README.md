@@ -59,3 +59,4 @@ Once the application is running, you just need to register as a user and login t
 ## Bonuses
 
 - Handle messages that are not understood or any exceptions raised within the bot.
+- Have more than one chatroom.
