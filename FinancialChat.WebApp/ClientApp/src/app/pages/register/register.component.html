@@ -1,0 +1,42 @@
+<div class="main d-flex align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 mx-auto">
+        <div class="card-group">
+          <div class="card p-4">
+            <div class="card-body">
+              <form [formGroup]="loginForm" (ngSubmit)="submit()" *ngIf="loginForm">
+                <h1>Register</h1>
+                <div class="mb-3">
+                  <input formControlName="username" type="text" class="form-control" placeholder="Username"
+                         autocomplete="username"
+                         [class.is-invalid]="loginForm.controls.username.errors && (loginForm.controls.username.dirty || loginForm.controls.username.touched)"
+                         required>
+                  <span *ngIf="loginForm.controls.username.errors && (loginForm.controls.username.dirty || loginForm.controls.username.touched)"
+                        class="text-danger">
+                    Username is required.
+                  </span>
+                </div>
+                <div class="mb-4">
+                  <input formControlName="password" type="password" class="form-control" placeholder="Password"
+                         autocomplete="password"
+                         [class.is-invalid]="loginForm.controls.password.errors && (loginForm.controls.password.dirty || loginForm.controls.password.touched)"
+                         required>
+                  <span *ngIf="loginForm.controls.password.errors && (loginForm.controls.password.dirty || loginForm.controls.password.touched)"
+                        class="text-danger">
+                    Password is required.
+                  </span>
+                </div>
+                <div class="row">
+                  <div class="col text-center">
+                    <button type="submit" class="btn btn-primary px-4" [disabled]="!loginForm.valid">Register</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
