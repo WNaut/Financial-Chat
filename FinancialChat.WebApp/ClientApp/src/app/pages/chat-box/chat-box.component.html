@@ -10,7 +10,7 @@
         </ul>
         <h1 class="text-center">ChatRooms</h1>
         <ul class="p-0 mt-3">
-            <li *ngFor="let item of connectedClients; let idx = index;">
+            <li>
                 <div class="pl-2 pt-2 connected-users">
                     <button (click)="changeRoom('Teams')">Teams</button>
                     <button (click)="changeRoom('Slack')">Slack</button>

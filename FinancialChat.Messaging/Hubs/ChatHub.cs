@@ -13,7 +13,6 @@ namespace FinancialChat.Messaging.Hubs
     {
         private readonly IMessageSender _messageSender;
 
-        // Chat users and messages could be saved to a database, I'm saving them this way for simplicity
         private static IList<ChatUser> _chatUsers = new List<ChatUser>();
         private static IList<ChatMessage> _messages = new List<ChatMessage>();
 

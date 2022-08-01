@@ -21,7 +21,6 @@ namespace FinancialChat.Bot.Facts
             Assert.Throws<ArgumentNullException>(() => _botService.GetStockQuote(null));
 
         [TestCase("/stock=AAPL.US")]
-        [TestCase("/stock=MSFT.UK")]
         [TestCase("/stock=GOOGL.US")]
         public void With_Valid_Command_Returns_StockQuote(string command)
         {

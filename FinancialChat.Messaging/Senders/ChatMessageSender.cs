@@ -26,11 +26,9 @@ namespace FinancialChat.Messaging.Senders
             { 
                 var factory = new ConnectionFactory
                 {
-                    //HostName = _rabbitMqOptions.HostName,
-                    //UserName = _rabbitMqOptions.Username,
-                    //Password = _rabbitMqOptions.Password,
-                    //Port = 15672,
-                    Uri = new Uri("amqp://guest:guest@localhost:15672")
+                    HostName = _rabbitMqOptions.HostName,
+                    UserName = _rabbitMqOptions.Username,
+                    Password = _rabbitMqOptions.Password,
                 };
 
                 _connection = factory.CreateConnection();
